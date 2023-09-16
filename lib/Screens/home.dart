@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hive/hive.dart';
 import 'package:hive_flutter/adapters.dart';
-import 'package:expense_tracker_flutter/data/listdata.dart';
 import 'package:expense_tracker_flutter/data/model/addDate.dart';
 import 'package:expense_tracker_flutter/data/utility.dart';
 
@@ -36,9 +34,9 @@ class _HomeState extends State<Home> {
                     SliverToBoxAdapter(
                       child: SizedBox(height: 340, child: _head()),
                     ),
-                    SliverToBoxAdapter(
+                    const SliverToBoxAdapter(
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 15),
+                        padding: EdgeInsets.symmetric(horizontal: 15),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -94,14 +92,14 @@ class _HomeState extends State<Home> {
       ),
       title: Text(
         history.name,
-        style: TextStyle(
+        style: const TextStyle(
           fontSize: 17,
           fontWeight: FontWeight.w600,
         ),
       ),
       subtitle: Text(
         '${day[history.datetime.weekday - 1]}  ${history.datetime.year}-${history.datetime.day}-${history.datetime.month}',
-        style: TextStyle(
+        style: const TextStyle(
           fontWeight: FontWeight.w600,
         ),
       ),
@@ -124,7 +122,7 @@ class _HomeState extends State<Home> {
             Container(
               width: double.infinity,
               height: 240,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Color(0xff368983),
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(20),
@@ -141,8 +139,8 @@ class _HomeState extends State<Home> {
                       child: Container(
                         height: 40,
                         width: 40,
-                        color: Color.fromRGBO(250, 250, 250, 0.1),
-                        child: Icon(
+                        color: const Color.fromRGBO(250, 250, 250, 0.1),
+                        child: const Icon(
                           Icons.notification_add_outlined,
                           size: 30,
                           color: Colors.white,
@@ -150,8 +148,8 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 35, left: 10),
+                  const Padding(
+                    padding: EdgeInsets.only(top: 35, left: 10),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -186,7 +184,7 @@ class _HomeState extends State<Home> {
             height: 170,
             width: 320,
             decoration: BoxDecoration(
-              boxShadow: [
+              boxShadow: const [
                 BoxShadow(
                   color: Color.fromRGBO(47, 125, 121, 0.3),
                   offset: Offset(0, 6),
@@ -194,14 +192,14 @@ class _HomeState extends State<Home> {
                   spreadRadius: 6,
                 ),
               ],
-              color: Color.fromARGB(255, 47, 125, 121),
+              color: const Color.fromARGB(255, 47, 125, 121),
               borderRadius: BorderRadius.circular(15),
             ),
             child: Column(
               children: [
-                SizedBox(height: 10),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 15),
+                const SizedBox(height: 10),
+                const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 15),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -220,14 +218,14 @@ class _HomeState extends State<Home> {
                     ],
                   ),
                 ),
-                SizedBox(height: 7),
+                const SizedBox(height: 7),
                 Padding(
                   padding: const EdgeInsets.only(left: 15),
                   child: Row(
                     children: [
                       Text(
                         '₹ ${total()}',
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 25,
                           color: Colors.white,
@@ -236,9 +234,9 @@ class _HomeState extends State<Home> {
                     ],
                   ),
                 ),
-                SizedBox(height: 25),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 15),
+                const SizedBox(height: 25),
+                const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 15),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -289,7 +287,7 @@ class _HomeState extends State<Home> {
                     ],
                   ),
                 ),
-                SizedBox(height: 6),
+                const SizedBox(height: 6),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 30),
                   child: Row(
@@ -297,7 +295,7 @@ class _HomeState extends State<Home> {
                     children: [
                       Text(
                         '₹ ${income()}',
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontWeight: FontWeight.w600,
                           fontSize: 17,
                           color: Colors.white,
@@ -305,7 +303,7 @@ class _HomeState extends State<Home> {
                       ),
                       Text(
                         '₹ ${expenses()}',
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontWeight: FontWeight.w600,
                           fontSize: 17,
                           color: Colors.white,
