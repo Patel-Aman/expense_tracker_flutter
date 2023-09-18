@@ -21,7 +21,7 @@ class _Add_ScreenState extends State<Add_Screen> {
   final List<String> _item = ['food', "transfer", "transportation", "study"];
   final List<String> _itemei = [
     'Income',
-    "Expand",
+    "Expense",
   ];
   @override
   void initState() {
@@ -205,7 +205,8 @@ class _Add_ScreenState extends State<Add_Screen> {
         focusNode: amount_,
         controller: amount_c,
         decoration: InputDecoration(
-          contentPadding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+          contentPadding:
+              const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
           labelText: 'amount',
           labelStyle: TextStyle(fontSize: 17, color: Colors.grey.shade500),
           enabledBorder: OutlineInputBorder(
@@ -226,7 +227,8 @@ class _Add_ScreenState extends State<Add_Screen> {
         focusNode: ex,
         controller: expalin_C,
         decoration: InputDecoration(
-          contentPadding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+          contentPadding:
+              const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
           labelText: 'explain',
           labelStyle: TextStyle(fontSize: 17, color: Colors.grey.shade500),
           enabledBorder: OutlineInputBorder(
